@@ -8,6 +8,11 @@ public class EnemyContorller : MonoBehaviour
     private SpriteRenderer spriteRender;
     public float moveSpeed;
     private Transform target;
+
+    public float damage;
+
+    public float hitWaitTime = 1f;
+    private float hitConuter;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +29,20 @@ public class EnemyContorller : MonoBehaviour
         {
             spriteRender.flipX = theRB.velocity.x > 0f;
         }    
+
+        if (hitConuter > 0f)
+        {
+            hitConuter -= Time.deltaTime;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && hitConuter <= 0f)
+        {
+            PlayerHealthController.Instance.TakeDamage(damage);
+
+            hitConuter = hitWaitTime;
+        }
     }
 }

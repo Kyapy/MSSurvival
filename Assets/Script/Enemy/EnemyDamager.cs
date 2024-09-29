@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class EnemyDamager : MonoBehaviour
     private Vector3 targetSize;
 
     public bool shouldKnockBack;
+
+    public bool destoryParent;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,11 @@ public class EnemyDamager : MonoBehaviour
             if (transform.localScale.x == 0f)
             {
                 Destroy(gameObject);
+
+                if (destoryParent)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
         }
     }
@@ -42,7 +50,7 @@ public class EnemyDamager : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyContorller>().TakeDamage(damageAmount, shouldKnockBack);
+            collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shouldKnockBack);
         }
     }
 }

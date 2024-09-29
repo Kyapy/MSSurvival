@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1670466726960080030}
   - component: {fileID: 5216865390636375453}
   - component: {fileID: 2567059121722155541}
-  - component: {fileID: 5310854285782879932}
   - component: {fileID: 7172505196080478048}
+  - component: {fileID: 8633825533808951174}
   - component: {fileID: 1732858261384844094}
   m_Layer: 0
   m_Name: Enemy_Slime
@@ -109,23 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5310854285782879932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3888875207974798826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a18b31035bc98b148bc542f016b4be53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 7172505196080478048}
-  moveSpeed: 1
-  damage: 5
-  hitWaitTime: 1
-  health: 5
 --- !u!50 &7172505196080478048
 Rigidbody2D:
   serializedVersion: 4
@@ -153,6 +136,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8633825533808951174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888875207974798826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f0ddac9866df34792544b04013f57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theRB: {fileID: 7172505196080478048}
+  moveSpeed: 1
+  damage: 5
+  hitWaitTime: 1
+  health: 5
+  knockBackTime: 0.5
+  knockBackCounter: 0
 --- !u!58 &1732858261384844094
 CircleCollider2D:
   m_ObjectHideFlags: 0

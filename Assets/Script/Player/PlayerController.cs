@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(moveInput);
 
         moveInput.Normalize();
 

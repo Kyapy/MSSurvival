@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
 
     public float knockBackTime = 0.5f;
     public float knockBackCounter;
+
+    public int expToGive = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Knockback logic
         if (knockBackCounter > 0)
         {
             knockBackCounter -= Time.deltaTime;
@@ -44,6 +47,7 @@ public class EnemyController : MonoBehaviour
             }
         }
 
+        // Swap sprite direction
         theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
 
         if (theRB.velocity.x != 0f)
@@ -59,6 +63,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Hiting & Damaging player logic
         if (collision.gameObject.tag == "Player" && hitConuter <= 0f)
         {
             PlayerHealthController.Instance.TakeDamage(damage);
@@ -69,10 +74,15 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float damageToTake)
     {
+        // Enemey take damage
         health -= damageToTake;
         if (health <= 0f)
         {
+            // Kill enemy
             Destroy(gameObject);
+
+            // Drop exp
+            ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);   
         }
 
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
@@ -83,6 +93,7 @@ public class EnemyController : MonoBehaviour
     {
         TakeDamage(damageToTake);
 
+        // check if enemy is knockable, boss monsters should not be knockable
         if (shouldKnockBack)
         {
             knockBackCounter = knockBackTime;

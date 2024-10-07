@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 137273989
+  m_SortingLayerID: 2066946799
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1273637537, guid: 1e8fd328055a88c4daa9fac62acebf78, type: 3}
@@ -155,6 +155,7 @@ MonoBehaviour:
   health: 5
   knockBackTime: 0.5
   knockBackCounter: 0
+  expToGive: 4
 --- !u!58 &1732858261384844094
 CircleCollider2D:
   m_ObjectHideFlags: 0

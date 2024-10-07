@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRender;
     public Animator anim;
 
+    public float pickupRange = 1.5f;
+
     // Declear variables
     public float moveSpeed;
 
+    public Weapon activeWeapon;
 
     // Start is called before the first frame update
     void Start()

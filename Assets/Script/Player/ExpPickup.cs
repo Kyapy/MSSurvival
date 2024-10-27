@@ -14,10 +14,12 @@ public class ExpPickup : MonoBehaviour
     private float checkCounter;
 
     private PlayerController player;
+    private PlayerStatController playerStats;
     // Start is called before the first frame update
     void Start()
     {
-        player = PlayerHealthController.Instance.GetComponent<PlayerController>();
+        player = PlayerController.instance;
+        playerStats = PlayerStatController.instance;
     }
 
     // Update is called once per frame
@@ -34,10 +36,10 @@ public class ExpPickup : MonoBehaviour
             {
                 checkCounter = timeBetweenChecks;
 
-                if(Vector3.Distance(transform.position, player.transform.position) < player.pickupRange)
+                if(Vector3.Distance(transform.position, player.transform.position) < playerStats.pickUpRange)
                 {
                     movingToPlayer = true;
-                    moveSpeed += player.moveSpeed;
+                    moveSpeed += playerStats.moveSpeed;
                 }
             }
         }

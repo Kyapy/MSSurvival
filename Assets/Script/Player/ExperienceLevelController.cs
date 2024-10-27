@@ -18,6 +18,8 @@ public class ExperienceLevelController : MonoBehaviour
     public List<int> expLevels;
     public int currentLevel = 1, levelCount = 100;
 
+    public List<Weapon> weaponsToUpgrade;
+
     private void Start()
     {
         while(expLevels.Count <levelCount)
@@ -41,7 +43,6 @@ public class ExperienceLevelController : MonoBehaviour
         }
 
         UIController.Instance.UpdateExperience(currentExperience, expLevels[currentLevel], currentLevel);
-        Debug.Log("Current Exp: " + currentExperience);
     }  
     
     public void SpawnExp(Vector3 position, int expValue)
@@ -65,6 +66,54 @@ public class ExperienceLevelController : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        UIController.Instance.LevelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
+        //UIController.Instance.LevelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.activeWeapon);
+        //UIController.Instance.LevelUpButtons[0].UpdateButtonDisplay(PlayerController.instance.assignedWeapons[0]);
+
+        //UIController.Instance.LevelUpButtons[1].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[0]);
+        //UIController.Instance.LevelUpButtons[2].UpdateButtonDisplay(PlayerController.instance.unassignedWeapons[1]);
+
+        weaponsToUpgrade.Clear();
+
+        List<Weapon> availableWeapons = new List<Weapon>();
+        availableWeapons.AddRange(PlayerController.instance.assignedWeapons);
+
+        if (availableWeapons.Count > 0)
+        {
+            int selected = Random.Range(0, availableWeapons.Count);
+            weaponsToUpgrade.Add(availableWeapons[selected]);
+            availableWeapons.RemoveAt(selected); 
+        }
+
+        if (PlayerController.instance.assignedWeapons.Count + PlayerController.instance.fullyLevelledWeapons.Count < PlayerController.instance.maxWeapons)
+        {
+            availableWeapons.AddRange(PlayerController.instance.unassignedWeapons);
+        }
+
+        for (int i = weaponsToUpgrade.Count; i < PlayerController.instance.maxWeapons; i++)
+        {
+            if (availableWeapons.Count > 0)
+            {
+                int selected = Random.Range(0, availableWeapons.Count);
+                weaponsToUpgrade.Add(availableWeapons[selected]);
+                availableWeapons.RemoveAt(selected);
+            }
+        }
+
+        for (int i = 0; i < weaponsToUpgrade.Count; i++)
+        {
+            UIController.Instance.LevelUpButtons[i].UpdateButtonDisplay(weaponsToUpgrade[i]);
+        }
+
+        for (int i = 0; i < UIController.Instance.LevelUpButtons.Length; i++)
+        {
+            if (i <weaponsToUpgrade.Count)
+            {
+                UIController.Instance.LevelUpButtons[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                UIController.Instance.LevelUpButtons[i].gameObject.SetActive(false);
+            }
+        }
     }
 }

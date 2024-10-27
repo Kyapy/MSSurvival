@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7172505196080478048}
   - component: {fileID: 8633825533808951174}
   - component: {fileID: 1732858261384844094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   health: 5
   knockBackTime: 0.5
   knockBackCounter: 0
-  expToGive: 4
+  expToGive: 5
 --- !u!58 &1732858261384844094
 CircleCollider2D:
   m_ObjectHideFlags: 0

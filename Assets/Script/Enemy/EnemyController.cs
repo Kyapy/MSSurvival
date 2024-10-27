@@ -20,6 +20,9 @@ public class EnemyController : MonoBehaviour
     public float knockBackCounter;
 
     public int expToGive = 1;
+
+    public int coinValue = 1;
+    public float coinDropRate = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,21 +34,30 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Knockback logic
-        if (knockBackCounter > 0)
+        // Is player alive
+        if (PlayerController.instance.gameObject.activeSelf == true)
         {
-            knockBackCounter -= Time.deltaTime;
-
-            if (moveSpeed > 0)
+            // Knockback logic
+            if (knockBackCounter > 0)
             {
-                moveSpeed = -moveSpeed * 2;
-            }
+                knockBackCounter -= Time.deltaTime;
 
-            if (knockBackCounter <= 0)
-            {
-                moveSpeed = Mathf.Abs(moveSpeed * 0.5f);
+                if (moveSpeed > 0)
+                {
+                    moveSpeed = -moveSpeed * 2;
+                }
+
+                if (knockBackCounter <= 0)
+                {
+                    moveSpeed = Mathf.Abs(moveSpeed * 0.5f);
+                }
             }
         }
+        else
+        {
+            theRB.velocity = Vector2.zero;
+        }
+
 
         // Swap sprite direction
         theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
@@ -83,6 +95,11 @@ public class EnemyController : MonoBehaviour
 
             // Drop exp
             ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);   
+
+            if (Random.value <= coinDropRate)
+            {
+                CoinController.instance.DropCoin(transform.position, coinValue);
+            }
         }
 
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);

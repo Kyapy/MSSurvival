@@ -31,7 +31,14 @@ public class Weapon_Spin : Weapon
         {
             spawnCounter = timeBtweenSpawn;
 
-            Instantiate(leekToSpawn, leekToSpawn.position, leekToSpawn.rotation, holder).gameObject.SetActive(true);
+            //Instantiate(leekToSpawn, leekToSpawn.position, leekToSpawn.rotation, holder).gameObject.SetActive(true);
+
+            for (int i = 0; i < stats[weaponLevel].amount; i++)
+            {
+                float rotation = (360f / stats[weaponLevel].amount) * i;
+
+                Instantiate(leekToSpawn, leekToSpawn.position, Quaternion.Euler(0f, 0f, rotation), holder).gameObject.SetActive(true);
+            }
 
         }
 

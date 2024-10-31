@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class PlayerHealthController : MonoBehaviour
 {
     public static PlayerHealthController Instance;
+    PlayerStatController playerStats;
 
     private void Awake()
     {
         Instance = this;
+
     }
 
     public float currnetHealth, maxHealth;
@@ -18,18 +20,25 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = PlayerStatController.instance.health;
-        currnetHealth = maxHealth;
+        playerStats = GetComponent<PlayerStatController>();
+
+        if (PlayerStatController.instance != null)
+        {
+            maxHealth = playerStats.health;
+            currnetHealth = maxHealth;
+
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currnetHealth;
+        }
+        else
+        {
+            Debug.LogWarning("PlayerStatController is not initialized");
+        }
 
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currnetHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TakeDamage(float damangeToTake)
     {

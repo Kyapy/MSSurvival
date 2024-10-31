@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3310119213272752715}
   - component: {fileID: 9049140066810936192}
   - component: {fileID: 1695346004266610612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -149,12 +149,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theRB: {fileID: 3310119213272752715}
+  spriteRender: {fileID: 0}
   moveSpeed: 0.5
   damage: 10
   hitWaitTime: 1
+  hitConuter: 0
   health: 10
   knockBackTime: 0.5
   knockBackCounter: 0
+  expToGive: 1
+  coinValue: 1
+  coinDropRate: 0.5
 --- !u!58 &1695346004266610612
 CircleCollider2D:
   m_ObjectHideFlags: 0

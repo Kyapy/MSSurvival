@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [Header("Internal Components")]
     public Rigidbody2D theRB;
-    private SpriteRenderer spriteRender;
+    public SpriteRenderer spriteRender;
+    public Animator anim;
     public float moveSpeed;
-    private Transform target;
+    public Transform target;
 
+    [Header("Stats")]
     public float damage;
 
     public float hitWaitTime = 1f;
-    private float hitConuter;
+    public float hitConuter;
 
     public float health = 5;
 
@@ -29,51 +32,28 @@ public class EnemyController : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
         target = FindObjectOfType<PlayerController>().transform;
         theRB = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();    
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeSpriteDirection()
     {
-        // Is player alive
-        if (PlayerController.instance.gameObject.activeSelf == true)
-        {
-            // Knockback logic
-            if (knockBackCounter > 0)
-            {
-                knockBackCounter -= Time.deltaTime;
-
-                if (moveSpeed > 0)
-                {
-                    moveSpeed = -moveSpeed * 2;
-                }
-
-                if (knockBackCounter <= 0)
-                {
-                    moveSpeed = Mathf.Abs(moveSpeed * 0.5f);
-                }
-            }
-        }
-        else
-        {
-            theRB.velocity = Vector2.zero;
-        }
-
-
-        // Swap sprite direction
-        theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
-
         if (theRB.velocity.x != 0f)
         {
             spriteRender.flipX = theRB.velocity.x > 0f;
-        }    
+        }
 
         if (hitConuter > 0f)
         {
             hitConuter -= Time.deltaTime;
         }
     }
+    public void MoveTowardPlayer()
+    {
+        theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
+    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         // Hiting & Damaging player logic
         if (collision.gameObject.tag == "Player" && hitConuter <= 0f)
@@ -84,29 +64,37 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damageToTake)
+    public virtual void Death()
     {
-        // Enemey take damage
-        health -= damageToTake;
-        if (health <= 0f)
-        {
             // Kill enemy
             Destroy(gameObject);
 
+
             // Drop exp
-            ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);   
+            ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);
 
             if (Random.value <= coinDropRate)
             {
                 CoinController.instance.DropCoin(transform.position, coinValue);
             }
-        }
-
-        DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
-     
+        
     }
 
-    public void TakeDamage(float damageToTake, bool shouldKnockBack)
+    public virtual void TakeDamage(float damageToTake)
+    {
+        // Enemey take damage
+        health -= damageToTake;
+
+        DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
+
+        if (health <= 0f)
+        {
+            Death();
+        }
+
+    }
+
+    public virtual void TakeDamage(float damageToTake, bool shouldKnockBack)
     {
         TakeDamage(damageToTake);
 

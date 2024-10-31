@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02b73943ca9d00b4b9bda428ff2f105d
+guid: e8c98b9fd0c1b124cb8adaddaaf772f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -140,6 +140,510 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009b78fadebe15442b1add55e791f8ef
+      internalID: 2099779073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3a885217a379342882713b3f53f84c
+      internalID: 1303533912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15c7ff2ac9d13548ac1747145a7b3d8
+      internalID: 220688743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a047a72c8542a1428812551b710d889
+      internalID: -70408123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9ba112d5ae5de4ba2a93c7a1dac24a
+      internalID: -177429569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 448
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c3964807beb3445a27d54c6dc30871
+      internalID: -1768926792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab507c1a38d149439e6ef4bd17bea83
+      internalID: 844886367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d871aef185a39d8498dd3939f6417016
+      internalID: 1524618699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1cad85608f06b4eb754a3ce89268b6
+      internalID: 1712591739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7894aaa932eff43a9cde27c7f58bec
+      internalID: -1771146612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e99f352ae2e40147abbcaa6340354e2
+      internalID: -1830434255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 336
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08f1810901ab6642a71608447a86cab
+      internalID: -695891741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5565a7c3e2a853d41a2953baace3b67f
+      internalID: -249154720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca68a37d5621bb4d9ffe29714f09def
+      internalID: 269266511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0f5ef3e32b19c4f8a7623f4b58a66f
+      internalID: -1493630521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f56ecebf1bbaac4eb4fdb05032a15eb
+      internalID: -877576530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae180547a17ffb4d928930f9f457d2b
+      internalID: -115352079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 224
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8dc89284005074a94b251d1b400192
+      internalID: -330855807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93d0b7e09b9b4b459a9f62d7d628e3c
+      internalID: -1850803756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd930f7652d496d448710abd92de7fd7
+      internalID: 460097435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61363054882f844ca1ab975104abacb
+      internalID: 469246144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510fc1f930f9980458a2c74c1cbd0ecd
+      internalID: 4501090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948f1efe467ab7843bf91a3a435060b9
+      internalID: -916150686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 112
+        width: 80
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6e91dc4fa68bf4fac81ec2fc943712
+      internalID: 2100856189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_slime_grand_jump-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 80
         height: 112
@@ -150,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 394b004ba4213f247ab53a218e4744d6
-      internalID: -322708658
+      spriteID: e81217a85d38c9e4089ae8d9e371b13b
+      internalID: 1800058725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_1
+      name: boss_slime_grand_jump-Sheet_25
       rect:
         serializedVersion: 2
         x: 80
@@ -171,512 +675,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21aefc074295156469560e25eb503557
-      internalID: -2000757538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0ccca1df50843c4e9c395ecf63962d6
-      internalID: 22744613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0404641ccc3670946a35d6b71db75d7e
-      internalID: 1684937123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 388db1b5c4319a743814c5944f8288f3
-      internalID: 134652808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c51e6b81ab11f64287b4cc702e5dd20
-      internalID: -1671424981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6a308e159ed447438c15dd4ec6b9446
-      internalID: 971572695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d88e986d9da32224299c0287b348a8fa
-      internalID: 1836545153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a7af274af9c1fa41bf7135c51cbea4e
-      internalID: -858160897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 236506acfc4178e44bd36efccb729bda
-      internalID: -188155891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71ecfa7e05acc83419519e4859df4e9b
-      internalID: 1121541955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c3692ca1b6851640a36070d9aa81bb8
-      internalID: 1766578948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88d51dea772b4c345bfbed863d3445a5
-      internalID: 934939965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1be8d0c8e03a06840b8affd5ace2be42
-      internalID: 1141044721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38852d866aec64a4f889d2ff15e3ba70
-      internalID: 1870405835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23e90176ce13140478eff51be5546de0
-      internalID: 1891660107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6df5b466367e99744af0273ae0588a52
-      internalID: -373939433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 1360
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6740ab8ab579761458656f86d441ec9f
-      internalID: 971883865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e8020b6db757874fbeda963eaec07f4
-      internalID: 1965877541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 1520
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 241b7aa367af94e49806c5619180d909
-      internalID: 816047528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5b3ad78de1b05f47893aeefb4f7952f
-      internalID: 744776515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 1680
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7186c6a18d546144bc30c7193909bf8
-      internalID: 1090923109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 1760
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3add29d15a2a2464ea490f83edb4df68
-      internalID: -2101990502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 1840
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8927e2b1cedd5349961125633665dfd
-      internalID: 636639445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea4f4d62c11e54a48a9d2a4428f102b7
-      internalID: 374170976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_grand_jump-Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 80
-        height: 112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70b2d8ef74c4c474f894d63fc0f0c90e
-      internalID: 96978827
+      spriteID: 4c2dd284e8e07444d8893b7fd2f29e6a
+      internalID: 318387998
       vertices: []
       indices: 
       edges: []
@@ -692,32 +692,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_slime_grand_jump-Sheet_0: -322708658
-      boss_slime_grand_jump-Sheet_1: -2000757538
-      boss_slime_grand_jump-Sheet_10: 1121541955
-      boss_slime_grand_jump-Sheet_11: 1766578948
-      boss_slime_grand_jump-Sheet_12: 934939965
-      boss_slime_grand_jump-Sheet_13: 1141044721
-      boss_slime_grand_jump-Sheet_14: 1870405835
-      boss_slime_grand_jump-Sheet_15: 1891660107
-      boss_slime_grand_jump-Sheet_16: -373939433
-      boss_slime_grand_jump-Sheet_17: 971883865
-      boss_slime_grand_jump-Sheet_18: 1965877541
-      boss_slime_grand_jump-Sheet_19: 816047528
-      boss_slime_grand_jump-Sheet_2: 22744613
-      boss_slime_grand_jump-Sheet_20: 744776515
-      boss_slime_grand_jump-Sheet_21: 1090923109
-      boss_slime_grand_jump-Sheet_22: -2101990502
-      boss_slime_grand_jump-Sheet_23: 636639445
-      boss_slime_grand_jump-Sheet_24: 374170976
-      boss_slime_grand_jump-Sheet_25: 96978827
-      boss_slime_grand_jump-Sheet_3: 1684937123
-      boss_slime_grand_jump-Sheet_4: 134652808
-      boss_slime_grand_jump-Sheet_5: -1671424981
-      boss_slime_grand_jump-Sheet_6: 971572695
-      boss_slime_grand_jump-Sheet_7: 1836545153
-      boss_slime_grand_jump-Sheet_8: -858160897
-      boss_slime_grand_jump-Sheet_9: -188155891
+      boss_slime_grand_jump-Sheet_0: 2099779073
+      boss_slime_grand_jump-Sheet_1: 1303533912
+      boss_slime_grand_jump-Sheet_10: -1830434255
+      boss_slime_grand_jump-Sheet_11: -695891741
+      boss_slime_grand_jump-Sheet_12: -249154720
+      boss_slime_grand_jump-Sheet_13: 269266511
+      boss_slime_grand_jump-Sheet_14: -1493630521
+      boss_slime_grand_jump-Sheet_15: -877576530
+      boss_slime_grand_jump-Sheet_16: -115352079
+      boss_slime_grand_jump-Sheet_17: -330855807
+      boss_slime_grand_jump-Sheet_18: -1850803756
+      boss_slime_grand_jump-Sheet_19: 460097435
+      boss_slime_grand_jump-Sheet_2: 220688743
+      boss_slime_grand_jump-Sheet_20: 469246144
+      boss_slime_grand_jump-Sheet_21: 4501090
+      boss_slime_grand_jump-Sheet_22: -916150686
+      boss_slime_grand_jump-Sheet_23: 2100856189
+      boss_slime_grand_jump-Sheet_24: 1800058725
+      boss_slime_grand_jump-Sheet_25: 318387998
+      boss_slime_grand_jump-Sheet_3: -70408123
+      boss_slime_grand_jump-Sheet_4: -177429569
+      boss_slime_grand_jump-Sheet_5: -1768926792
+      boss_slime_grand_jump-Sheet_6: 844886367
+      boss_slime_grand_jump-Sheet_7: 1524618699
+      boss_slime_grand_jump-Sheet_8: 1712591739
+      boss_slime_grand_jump-Sheet_9: -1771146612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,6 +9,7 @@ public class PlayerStatController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        InitializeStats();
     }
 
     // Set stats from base stats

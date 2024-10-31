@@ -23,4 +23,5 @@ MonoBehaviour:
   Health: 100
   damageReduction: 0
   blockRate: 0
-  moveSpeed: 1
+  moveSpeed: 1.5
+  pickupRange: 1

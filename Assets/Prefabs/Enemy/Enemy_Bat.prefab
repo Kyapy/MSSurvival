@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7596574605119668462}
   - component: {fileID: 5894065605032479853}
   - component: {fileID: 291457760899414293}
-  - component: {fileID: 2296402769504157140}
+  - component: {fileID: 8698641932613494855}
   - component: {fileID: 3957035187367745872}
   m_Layer: 6
   m_Name: Enemy_Bat
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2296402769504157140
+--- !u!114 &8698641932613494855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6958441428140135059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f0ddac9866df34792544b04013f57e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ca8965790b567546add15a011334da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 291457760899414293}
+  theRB: {fileID: 0}
   moveSpeed: 1
   damage: 5
   hitWaitTime: 1
@@ -156,6 +156,8 @@ MonoBehaviour:
   knockBackTime: 0.5
   knockBackCounter: 0
   expToGive: 1
+  coinValue: 1
+  coinDropRate: 0.5
 --- !u!58 &3957035187367745872
 CircleCollider2D:
   m_ObjectHideFlags: 0

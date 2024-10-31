@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3131029776734162752}
   - component: {fileID: 2297352010889359961}
   - component: {fileID: 6009187644784310896}
-  - component: {fileID: 4455107348230639966}
+  - component: {fileID: 2104041260772995416}
   - component: {fileID: 2015200894844914941}
   m_Layer: 6
   m_Name: Enemy_Bearbee
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4455107348230639966
+--- !u!114 &2104041260772995416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8189253670266825450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f0ddac9866df34792544b04013f57e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ca8965790b567546add15a011334da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 6009187644784310896}
+  theRB: {fileID: 0}
   moveSpeed: 1
   damage: 5
   hitWaitTime: 1
@@ -156,6 +156,8 @@ MonoBehaviour:
   knockBackTime: 0.5
   knockBackCounter: 0
   expToGive: 1
+  coinValue: 1
+  coinDropRate: 0.5
 --- !u!58 &2015200894844914941
 CircleCollider2D:
   m_ObjectHideFlags: 0

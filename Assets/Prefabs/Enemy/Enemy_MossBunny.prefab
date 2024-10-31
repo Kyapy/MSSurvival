@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1369166520081016492}
   - component: {fileID: 8775322287753100473}
+  - component: {fileID: -4790242110986350757}
   - component: {fileID: 1624585847277832259}
   - component: {fileID: 5099785162909568320}
-  - component: {fileID: 3551414076054713203}
   - component: {fileID: 4844981424184812421}
   m_Layer: 6
   m_Name: Enemy_MossBunny
@@ -88,6 +88,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4790242110986350757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799263340382080855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca8965790b567546add15a011334da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theRB: {fileID: 0}
+  moveSpeed: 1
+  damage: 5
+  hitWaitTime: 1
+  health: 5
+  knockBackTime: 0.5
+  knockBackCounter: 0
+  expToGive: 1
+  coinValue: 1
+  coinDropRate: 0.5
 --- !u!95 &1624585847277832259
 Animator:
   serializedVersion: 5
@@ -136,26 +158,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3551414076054713203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799263340382080855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f0ddac9866df34792544b04013f57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theRB: {fileID: 5099785162909568320}
-  moveSpeed: 1
-  damage: 5
-  hitWaitTime: 1
-  health: 5
-  knockBackTime: 0.5
-  knockBackCounter: 0
-  expToGive: 1
 --- !u!58 &4844981424184812421
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a16dfac19e3a5c74dbbab1b3110aaf98
+guid: 8e0cf3ecca7634b44b21b8f0bf56f35d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,18 +140,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 320
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7d9e18151fd824ab3677e61bb70e73
-      internalID: -1451267193
+      spriteID: b91391de257435d49a8537eba0b3cd4b
+      internalID: 931653514
       vertices: []
       indices: 
       edges: []
@@ -161,18 +161,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 0
+        y: 320
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad2d7f7f792b1040a757dea9a928663
-      internalID: -984855700
+      spriteID: db811d2c12d9472428630d7d51d9d524
+      internalID: 323925639
       vertices: []
       indices: 
       edges: []
@@ -182,18 +182,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 0
+        y: 320
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6a410cfd3efbf440947d7c8c41e28bd
-      internalID: 448594152
+      spriteID: 0346e21e073c705488b815c9b2a83ba6
+      internalID: -995387709
       vertices: []
       indices: 
       edges: []
@@ -203,18 +203,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 0
+        y: 320
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7618e9b9b928bad4e8c6ba122253ba2c
-      internalID: 1811448692
+      spriteID: fc4d39d2e5c2e5f4caaf669fd8d6026f
+      internalID: 296474524
       vertices: []
       indices: 
       edges: []
@@ -224,18 +224,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 0
+        y: 320
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b4724c3999ac2f4ab080f5e10766f97
-      internalID: 516950732
+      spriteID: b1f3186a7e0aeeb41969eac07b7078fb
+      internalID: -1830808958
       vertices: []
       indices: 
       edges: []
@@ -244,19 +244,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_5
       rect:
         serializedVersion: 2
-        x: 800
-        y: 0
+        x: 0
+        y: 240
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeffafe47b2e9e744975ab4453234029
-      internalID: -1474815408
+      spriteID: 813b83832f273734986db07efb7f0098
+      internalID: 2435184
       vertices: []
       indices: 
       edges: []
@@ -265,19 +265,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_6
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
+        x: 160
+        y: 240
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30680c9ac50e5c54b9de7c7d6ea0c8ae
-      internalID: -38702414
+      spriteID: 27d5977b27d7e4a4b8200407e1f2f7e1
+      internalID: 1113596201
       vertices: []
       indices: 
       edges: []
@@ -286,19 +286,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_7
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 0
+        x: 320
+        y: 240
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49098808dd3e2e24b9060fbaa8e41649
-      internalID: 225579916
+      spriteID: b85d228272ab5544d84e7ee96b9a58f8
+      internalID: 6266999
       vertices: []
       indices: 
       edges: []
@@ -307,19 +307,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_8
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 0
+        x: 480
+        y: 240
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72f0f5f48d811124b9866be1d26b2032
-      internalID: 1085134721
+      spriteID: 3ab17edbee4a05c44b595058af56179e
+      internalID: -1666495529
       vertices: []
       indices: 
       edges: []
@@ -328,19 +328,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_9
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
+        x: 640
+        y: 240
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5e20a2941ce154ab5eb699f9ca4b15
-      internalID: 28944117
+      spriteID: 253860f70e54c984d87bec1aa190a302
+      internalID: -171555559
       vertices: []
       indices: 
       edges: []
@@ -349,19 +349,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_10
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 0
+        x: 0
+        y: 160
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45156df48820d3b4abdf747072915c91
-      internalID: -1499032183
+      spriteID: df923c487bfc81640b1a9f0ef4255cfb
+      internalID: -1320017631
       vertices: []
       indices: 
       edges: []
@@ -370,19 +370,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_11
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 0
+        x: 160
+        y: 160
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d9b84590e21ce94db9c270956330e97
-      internalID: -421753157
+      spriteID: e1ee636444df70d468788e0716b9811a
+      internalID: 1790031821
       vertices: []
       indices: 
       edges: []
@@ -391,19 +391,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_12
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 0
+        x: 320
+        y: 160
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71d79cb0e8d65e84c9496a1b47dd9848
-      internalID: -424083667
+      spriteID: 9bea504bbdf1bcd40b8806def6587206
+      internalID: 252217073
       vertices: []
       indices: 
       edges: []
@@ -412,19 +412,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_13
       rect:
         serializedVersion: 2
-        x: 2080
-        y: 0
+        x: 480
+        y: 160
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea6b1f27e7417264aa0560353a647b01
-      internalID: 1714374937
+      spriteID: 79b305d7f010aa648bf5e5b898fcb9eb
+      internalID: 477399285
       vertices: []
       indices: 
       edges: []
@@ -433,19 +433,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_14
       rect:
         serializedVersion: 2
-        x: 2240
-        y: 0
+        x: 640
+        y: 160
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6977ddd1f6d74749a287265c9fef4c6
-      internalID: -482297444
+      spriteID: 50673618d29d5fa4c90128276767730a
+      internalID: 1860665238
       vertices: []
       indices: 
       edges: []
@@ -454,19 +454,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_15
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 0
+        x: 0
+        y: 80
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d30fb2d719395c64caa234dcaf767a64
-      internalID: -1532660466
+      spriteID: 31ebc3a72e7e0f3428fc44123d68a99c
+      internalID: 1317552420
       vertices: []
       indices: 
       edges: []
@@ -475,19 +475,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_16
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 0
+        x: 160
+        y: 80
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c12b9055eb2ff4b9ca1cd4670767c0
-      internalID: 957722294
+      spriteID: e3b53f2c275cf794993f18d9586fdb0b
+      internalID: 13616956
       vertices: []
       indices: 
       edges: []
@@ -496,19 +496,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_17
       rect:
         serializedVersion: 2
-        x: 2720
-        y: 0
+        x: 320
+        y: 80
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc548ba71c445b4b8af57fdd367d575
-      internalID: -697258980
+      spriteID: c1ceb7c2f7d6bf04498089db297cffc9
+      internalID: 1149832341
       vertices: []
       indices: 
       edges: []
@@ -517,19 +517,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_18
       rect:
         serializedVersion: 2
-        x: 2880
-        y: 0
+        x: 480
+        y: 80
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8eab4a92cd121142aca90b5ca81c11d
-      internalID: -1660825800
+      spriteID: b953681c3133df449abdae64a3508fe0
+      internalID: 1728015435
       vertices: []
       indices: 
       edges: []
@@ -538,19 +538,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_19
       rect:
         serializedVersion: 2
-        x: 3040
-        y: 0
+        x: 640
+        y: 80
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c93fcf162011bb47b09d190d26d774d
-      internalID: -1115661829
+      spriteID: fa74556d354871947a5a6f228bb13773
+      internalID: 727815635
       vertices: []
       indices: 
       edges: []
@@ -559,19 +559,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_20
       rect:
         serializedVersion: 2
-        x: 3200
+        x: 0
         y: 0
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683399aa504234147b1fb168767564b2
-      internalID: 263949439
+      spriteID: ebfdec8150266ad4285316db05cc9c64
+      internalID: -349647535
       vertices: []
       indices: 
       edges: []
@@ -580,103 +580,19 @@ TextureImporter:
       name: boss_slime_death-Sheet_21
       rect:
         serializedVersion: 2
-        x: 3360
+        x: 160
         y: 0
         width: 160
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2566191, y: 0.4457046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1991c146a38df4044b865026dd8d156d
-      internalID: 1530400798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_death-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 3520
-        y: 0
-        width: 160
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2358731bc8b16224fa579ea21013f28e
-      internalID: -1406447892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_death-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 3680
-        y: 0
-        width: 160
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d9aa7b78c5707e4d8c38637c442c02b
-      internalID: -579901084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_death-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 160
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 798eb6e211fdb0e45802bfbfd69d565d
-      internalID: 307809254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_slime_death-Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 160
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa072380ae499d44789e9a0fb35fb59f
-      internalID: 565259377
+      spriteID: d0cf87f9d47b65943b194fb0a6edde62
+      internalID: -106007663
       vertices: []
       indices: 
       edges: []
@@ -692,32 +608,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_slime_death-Sheet_0: -1451267193
-      boss_slime_death-Sheet_1: -984855700
-      boss_slime_death-Sheet_10: -1499032183
-      boss_slime_death-Sheet_11: -421753157
-      boss_slime_death-Sheet_12: -424083667
-      boss_slime_death-Sheet_13: 1714374937
-      boss_slime_death-Sheet_14: -482297444
-      boss_slime_death-Sheet_15: -1532660466
-      boss_slime_death-Sheet_16: 957722294
-      boss_slime_death-Sheet_17: -697258980
-      boss_slime_death-Sheet_18: -1660825800
-      boss_slime_death-Sheet_19: -1115661829
-      boss_slime_death-Sheet_2: 448594152
-      boss_slime_death-Sheet_20: 263949439
-      boss_slime_death-Sheet_21: 1530400798
-      boss_slime_death-Sheet_22: -1406447892
-      boss_slime_death-Sheet_23: -579901084
-      boss_slime_death-Sheet_24: 307809254
-      boss_slime_death-Sheet_25: 565259377
-      boss_slime_death-Sheet_3: 1811448692
-      boss_slime_death-Sheet_4: 516950732
-      boss_slime_death-Sheet_5: -1474815408
-      boss_slime_death-Sheet_6: -38702414
-      boss_slime_death-Sheet_7: 225579916
-      boss_slime_death-Sheet_8: 1085134721
-      boss_slime_death-Sheet_9: 28944117
+      boss_slime_death-Sheet_0: 931653514
+      boss_slime_death-Sheet_1: 323925639
+      boss_slime_death-Sheet_10: -1320017631
+      boss_slime_death-Sheet_11: 1790031821
+      boss_slime_death-Sheet_12: 252217073
+      boss_slime_death-Sheet_13: 477399285
+      boss_slime_death-Sheet_14: 1860665238
+      boss_slime_death-Sheet_15: 1317552420
+      boss_slime_death-Sheet_16: 13616956
+      boss_slime_death-Sheet_17: 1149832341
+      boss_slime_death-Sheet_18: 1728015435
+      boss_slime_death-Sheet_19: 727815635
+      boss_slime_death-Sheet_2: -995387709
+      boss_slime_death-Sheet_20: -349647535
+      boss_slime_death-Sheet_21: -106007663
+      boss_slime_death-Sheet_3: 296474524
+      boss_slime_death-Sheet_4: -1830808958
+      boss_slime_death-Sheet_5: 2435184
+      boss_slime_death-Sheet_6: 1113596201
+      boss_slime_death-Sheet_7: 6266999
+      boss_slime_death-Sheet_8: -1666495529
+      boss_slime_death-Sheet_9: -171555559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

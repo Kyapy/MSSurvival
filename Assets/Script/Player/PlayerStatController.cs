@@ -29,6 +29,7 @@ public class PlayerStatController : MonoBehaviour
     public int health;
     public float damageReduction;
     public float blockRate;
+    public float invulerableDuration;
 
     [Header("Movement Stats")]
     public float moveSpeed;
@@ -49,12 +50,11 @@ public class PlayerStatController : MonoBehaviour
             criticalDamageMultiplier = baseStats.criticalDamageMultifier;
             weaponRange = baseStats.weaponRange;
             attackSpeed = baseStats.attackSpeed;
-            knockbackTime = baseStats.knockbackTime;
-            knockbackForce = baseStats.knockbackForce;
 
             health = baseStats.Health;
             damageReduction = baseStats.damageReduction;
             blockRate = baseStats.blockRate;
+            invulerableDuration = baseStats.invulerableDuration;
 
             moveSpeed = baseStats.moveSpeed;
             pickUpRange = baseStats.pickupRange;

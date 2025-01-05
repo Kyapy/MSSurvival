@@ -18,10 +18,9 @@ MonoBehaviour:
   criticalDamageMultifier: 150
   weaponRange: 1
   attackSpeed: 1
-  knockbackTime: 1
-  knockbackForce: 1
   Health: 100
   damageReduction: 0
   blockRate: 0
-  moveSpeed: 1.5
+  invulerableDuration: 2
+  moveSpeed: 3
   pickupRange: 1

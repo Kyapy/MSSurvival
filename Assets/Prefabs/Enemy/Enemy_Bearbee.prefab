@@ -149,9 +149,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theRB: {fileID: 0}
+  spriteRender: {fileID: 0}
+  anim: {fileID: 0}
   moveSpeed: 1
+  target: {fileID: 0}
   damage: 5
+  canMove: 0
+  isInvulnerable: 0
   hitWaitTime: 1
+  hitConuter: 0
   health: 5
   knockBackTime: 0.5
   knockBackCounter: 0
@@ -187,7 +193,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01, y: -0.2}

@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.VisionOS;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -8,145 +9,119 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EnemyController_Boss_Slime : EnemyController
 {
-    enum boss_SlimeState {idle, run, attack, jump,inAir, landing, summon, death}
-
-    boss_SlimeState state;
+    private enum BossSlimeState { Idle, Run, Attack, Jump, InAir, Landing, Summon, Death }
 
     [Header("Internal Status")]
+    private BossSlimeState state;
     public bool stateComplete = true;
-
-    // Can it be damaged?
-    public bool isinvulnerable = false;
     public bool isDead = false;
 
     private float counter, movingCounter;
+    public GameObject slimeSummon;
 
     [Header("Global Cooldowns")]
     public float globalCooldown;
     private float globalCooldownCounter;
 
-    // Move list
     [Header("Move Lists")]
-    public List<MoveStats> moveList = new List<MoveStats>();
+    public MoveStats summon;
+    public MoveStats jump;
+    private readonly List<MoveStats> moveList = new List<MoveStats>();
+    private readonly List<MoveStats> onCooldown = new List<MoveStats>();
+    public GameObject shadow;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        ChangeSpriteDirection();
-        counter -= Time.deltaTime;
+        moveList.Add(summon);
+        moveList.Add(jump);
+        globalCooldownCounter = globalCooldown;
 
-        // check if global counter is activated
-        if (globalCooldownCounter > 0) 
-        {
-            globalCooldownCounter -= Time.deltaTime;
-        }
-
-        if (isDead == false)
-        {
-            {
-                if (stateComplete == true)
-                {
-                    selectState();
-                }
-
-                UpdateState();
-            }
-        }
-
+        // Turn off shadow if on
+        shadow.gameObject.SetActive(false);
     }
 
-    // State handling
-    void UpdateState()
+    void Update()
+    {
+        if (isDead) return;
+
+        ChangeSpriteDirection();
+        counter -= Time.deltaTime;
+        globalCooldownCounter = Mathf.Max(0, globalCooldownCounter - Time.deltaTime);
+
+        checkCooldowns();
+
+        if (stateComplete)
+        {
+            selectState();
+        }
+
+        UpdateState();
+    }
+
+    private void UpdateState()
     {
         switch (state)
         {
-            case boss_SlimeState.idle:
+            case BossSlimeState.Idle:
                 idleUpdate();
                 break;
-            case boss_SlimeState.run:
+            case BossSlimeState.Run:
                 runUpdate();
                 break;
-            case boss_SlimeState.attack:
-                attackUpdate();
+            case BossSlimeState.Jump:
+                jumpUpdate();
                 break;
-            case boss_SlimeState.jump:
-
+            case BossSlimeState.InAir:
+                inAirUpdate();
                 break;
-            case boss_SlimeState.inAir:
-
+            case BossSlimeState.Landing:
+                landingUpdate();
                 break;
-            case boss_SlimeState.landing:
-
+            case BossSlimeState.Summon:
+                summonUpdate();
                 break;
-            case boss_SlimeState.summon:
-
+            case BossSlimeState.Death:
+                // Death logic could be added here if needed.
                 break;
         }
     }
 
-    void selectState()
+    private void selectState()
     {
         stateComplete = false;
-
-        // reset movement to 0
         theRB.velocity = Vector2.zero;
 
-        bool movePerformed = false;
+        if (globalCooldownCounter <= 0 && chooseMove())
+            return;
 
-        // check available move when globalcooldown is ready
-        if (globalCooldownCounter <= 0)
-        {
-            Debug.Log("Selected attack state");
-            movePerformed = true;  
-            attackStart();
-            //movePerformed = chooseMove();
-        }
-
-        // Run or Idle when no move available
-        if (movePerformed == false)
-        {
-            runStart();
-            // counter for run/idle movement
-            counter = movingCounter;
-        }
-
-
+        runStart();
+        counter = movingCounter;
     }
 
-    void idleStart()
+    // State Start and Update Methods
+    private void idleStart()
     {
-        Debug.Log("idle start");
-
-        state = boss_SlimeState.idle;
+        Debug.Log("Idle Start");
+        state = BossSlimeState.Idle;
         anim.SetBool("isMoving", false);
-
         movingCounter = 1f;
     }
 
-    void idleUpdate()
+    private void idleUpdate()
     {
-        Debug.Log("idling");
-
-        if (counter <= 0)
-        {
-            stateComplete = true;
-        }
+        if (counter <= 0) stateComplete = true;
     }
 
-    void runStart()
+    private void runStart()
     {
-        Debug.Log("run start");
-
-        state = boss_SlimeState.run;
+        Debug.Log("Run Start");
+        state = BossSlimeState.Run;
         anim.SetBool("isMoving", true);
-
         movingCounter = Random.Range(3, 5);
     }
 
-    void runUpdate()
+    private void runUpdate()
     {
-        Debug.Log("running");
-
         if (globalCooldownCounter <= 0)
         {
             stateComplete = true;
@@ -155,26 +130,84 @@ public class EnemyController_Boss_Slime : EnemyController
         MoveTowardPlayer();
     }
 
-    void attackStart()
+    private void jumpStart()
     {
-        Debug.Log("attack start");
-        state = boss_SlimeState.attack;
+        Debug.Log("Jump Start");
         anim.SetTrigger("jump");
-        //anim.SetTrigger("summon");
-
     }
 
-    void attackUpdate()
+    private void jumpUpdate()
     {
-        Debug.Log("attacking");
-
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Boss_Slime_inAir"))
+        {
+            state = BossSlimeState.InAir;
+            inAirStart();
+        }
     }
 
-    void attackEnd()
+    private void inAirStart()
+    {
+        // trigger inair animtor will make sprite transparent
+        Debug.Log("In Air Start");
+        // set attack counter back to zero
+        jump.counterCount = 0;
+        // turn on shadow
+        shadow.gameObject.transform.localScale = Vector3.zero;
+        shadow.gameObject.SetActive(true);
+    }
+
+    private void inAirUpdate()
+    {
+        jump.counterCount += Time.deltaTime;
+        if (jump.counterCount >= jump.counter)
+        {
+            shadow.gameObject.transform.localScale = Vector3.MoveTowards(shadow.gameObject.transform.localScale, Vector3.one, jump.speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = target.position + Vector3.up;
+        }
+ 
+       
+
+        if (Vector3.Distance(shadow.gameObject.transform.localScale, Vector3.one) < 0.01f)
+        {
+            shadow.gameObject.transform.localScale = Vector3.one;
+            state = BossSlimeState.Landing;
+            shadow.gameObject.SetActive(false);
+            anim.SetTrigger("land");
+        }
+    }
+
+    private void landingUpdate()
+    {
+        // Placeholder for landing update logic if needed.
+    }
+
+    private void summonStart()
+    {
+        Debug.Log("Summon Start");
+        anim.SetTrigger("summon");
+    }
+
+    private void summonUpdate()
+    {
+        // Placeholder for summon update logic if needed.
+    }
+
+    private void summonSlime()
+    {
+        Vector3 spawnOffset = spriteRender.flipX ? new Vector3(-3, -2, 0) : new Vector3(3, -2, 0);
+        Instantiate(slimeSummon, transform.position + spawnOffset, Quaternion.identity);
+        attackEnd();
+    }
+
+    private void attackEnd()
     {
         Debug.Log("Move ended, selecting state...");
         anim.SetBool("isMoving", false);
-        state = boss_SlimeState.idle;
+        state = BossSlimeState.Idle;
         stateComplete = true;
         globalCooldownCounter = globalCooldown;
     }
@@ -183,74 +216,66 @@ public class EnemyController_Boss_Slime : EnemyController
     {
         foreach (MoveStats move in moveList)
         {
-            if (move.isUnconditional == true && move.cooldownCount <= 0)
-            {
+            if (move.isUnconditional && move.cooldownCount <= 0)
                 Debug.Log($"{move.moveName} is ready to use");
-            }
             else
-            {
-                move.cooldown -= Time.deltaTime;
-            }
+                move.cooldownCount -= Time.deltaTime;
         }
-
     }
 
     private bool chooseMove()
     {
-        // filter available moves with colldowns ready and that are unconditonal
-        List<MoveStats> availableMoves = moveList.FindAll(move => move.isUnconditional == true && move.cooldownCount <= 0 ); 
-
+        List<MoveStats> availableMoves = moveList.FindAll(move => move.isUnconditional && move.cooldownCount <= 0);
         if (availableMoves.Count > 0)
         {
             MoveStats chosenMove = availableMoves[Random.Range(0, availableMoves.Count)];
             PerformMove(chosenMove);
             return true;
         }
-        else
-        {
-            Debug.Log("No available move to perform");
-            return false;
-        }
+
+        Debug.Log("No available move to perform");
+        return false;
     }
 
     private void PerformMove(MoveStats move)
     {
-        Debug.Log("Performing move: " + move.moveName);
-        // reset cooldown for the move
         move.cooldownCount = move.cooldown;
+        onCooldown.Add(move);
+
+        switch (move.moveName)
+        {
+            case "jump":
+                state = BossSlimeState.Jump;
+                jumpStart();
+                break;
+            case "summon":
+                state = BossSlimeState.Summon;
+                summonStart();
+                break;
+            default:
+                Debug.LogWarning("Move not recognized: " + move.moveName);
+                break;
+        }
+        globalCooldownCounter = globalCooldown;
     }
 
-
-    public void invulerable()
-    {
-        isinvulnerable = true;
-    }
-    
-    public void vulerable()
-    {
-        isinvulnerable = false;
-    }
     public override void TakeDamage(float damageToTake, bool shouldKnockBack)
     {
-        if (isinvulnerable == false) 
+        if (!isInvulnerable)
         {
             health -= damageToTake;
-
             DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
 
-            if (health <= 0f)
+            if (health <= 0)
             {
+                state = BossSlimeState.Death;
                 theRB.velocity = Vector2.zero;
                 anim.SetTrigger("isDead");
-                isinvulnerable = true;
+                isInvulnerable = true;
                 isDead = true;
             }
-            
         }
-
     }
-
-   
 }
 
 // Class for each moveset
@@ -265,4 +290,8 @@ public class MoveStats
     public float cooldownCount = 0f;
 
     public float damage, speed, range; // move stats
+
+    // additional counter if need
+    public float counter;
+    public float counterCount = 0f;
 }

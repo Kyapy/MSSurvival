@@ -12,13 +12,12 @@ public class BaseStats : ScriptableObject
     public float criticalDamageMultifier = 150f;
     public float weaponRange;
     public float attackSpeed;
-    public float knockbackTime;
-    public float knockbackForce;
 
     [Header("Defencive Stats")]
     public int Health;
     public float damageReduction;
     public float blockRate;
+    public float invulerableDuration;
 
     [Header("Movement Stats")]
     public float moveSpeed = 1f;

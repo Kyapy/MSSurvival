@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,18 +13,27 @@ public class PlayerController : MonoBehaviour
         instance = this;
     }
 
-    private Rigidbody2D rb;
+    [Header("Player Components")]
+    public Rigidbody2D rb;
     private SpriteRenderer spriteRender;
     public Animator anim;
+    public bool canMove = true;
+    public Vector2 moveInput = Vector2.zero;
+    public bool isInvulerable = false;
 
-    private PlayerStatController playerStats;
+    public PlayerStatController playerStats;
+
+    [Header("Knockback Settings")]
+    public bool isKnockbackActive = false;
+    private Vector2 knockbackForce = Vector2.zero;
+    private float knockbackDuration = 0f;
+    private float knockbackTimer = 0f;
 
     //public Weapon activeWeapon;
-
-    public List<Weapon> unassignedWeapons, assignedWeapons;
-
+    [Header("Weapon Setting")]
+    public List<Weapon> unassignedWeapons;
+    public List<Weapon> assignedWeapons;
     public int maxWeapons = 3;
-
     [HideInInspector]
     public List<Weapon> fullyLevelledWeapons = new List<Weapon>();
 
@@ -50,36 +60,86 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
     private void FixedUpdate()
     {
-        // Player input movement
-        Vector3 moveInput = new Vector3(0f, 0f, 0f);
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-
-        // Fix dinagonal movement
-        moveInput.Normalize();
-
-        // moveSpeed is referenced fromPlayerStatController.instance
-        transform.position += moveInput * playerStats.moveSpeed * Time.deltaTime;
-
-        // Player sprite direction
-        if (moveInput.x != 0)
+        if (isKnockbackActive)
         {
-            spriteRender.flipX = moveInput.x > 0f;
+            // Apply knockback force
+            knockbackForce = Vector2.Lerp(knockbackForce, Vector2.zero, 10f * Time.fixedDeltaTime);
+
+            rb.velocity = knockbackForce;
+
+            // Countdown knockback timer
+            knockbackTimer -= Time.fixedDeltaTime;
+
+            if (knockbackTimer <= 0)
+            {
+                // End knockback
+                isKnockbackActive = false;
+                rb.velocity = Vector2.zero; // Reset velocity
+                canMove = true; // Re-enable movement
+            }
+            return; // Skip regular movement
         }
 
-        // Player running animation
-        if (moveInput != Vector3.zero)
+        if (canMove)
         {
+            // Get player input
+            moveInput = new Vector2(
+                Input.GetAxisRaw("Horizontal"),
+                Input.GetAxisRaw("Vertical")
+            ).normalized;
 
-            anim.SetBool("isMoving", true);
+            // Apply movement based on player input
+            rb.velocity = moveInput * playerStats.moveSpeed;
+
+                    // Player sprite direction
+            if (moveInput.x != 0)
+            {
+                spriteRender.flipX = moveInput.x > 0f;
+            }
+
+            // Player running animation
+            if (moveInput != Vector2.zero)
+            {
+
+                anim.SetBool("isMoving", true);
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
         }
-        else
+    }
+
+    public void ApplyKnockback(Vector2 direction, float force, float duration)
+    {
+        knockbackForce = direction.normalized * force;
+        knockbackTimer = duration;
+        isKnockbackActive = true;
+        canMove = false;
+
+        StartCoroutine(invulerableRoutine(playerStats.invulerableDuration));
+
+        Debug.Log($"Knockback Applied: Force = {knockbackForce}, Duration = {knockbackTimer}");
+    }
+
+    public IEnumerator invulerableRoutine(float duration, float flickerInterval = 0.1f)
+    {
+        Debug.Log("invulerable started");
+        float timer = 0f;
+
+        while (timer < duration)
         {
-            anim.SetBool("isMoving", false);
+            spriteRender.enabled = !spriteRender.enabled;
+            yield return new WaitForSeconds(flickerInterval);
+            timer += flickerInterval;
         }
+
+        spriteRender.enabled = true;    
+        isInvulerable = false;
     }
 
     // Add weapon to player

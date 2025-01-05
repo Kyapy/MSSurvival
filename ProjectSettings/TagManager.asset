@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Boss
+  - Invulnerable
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Invulnerable
   - 
   - 
   - 
@@ -46,9 +47,6 @@ TagManager:
   - name: Tilemap
     uniqueID: 991049463
     locked: 0
-  - name: Enemy
-    uniqueID: 2066946799
-    locked: 0
   - name: Pickups
     uniqueID: 2038576305
     locked: 0
@@ -57,6 +55,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 137273989
+    locked: 0
+  - name: Enemy
+    uniqueID: 2066946799
     locked: 0
   - name: UI
     uniqueID: 455319187

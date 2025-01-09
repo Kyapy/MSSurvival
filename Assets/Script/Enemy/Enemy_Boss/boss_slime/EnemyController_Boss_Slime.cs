@@ -1,10 +1,12 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.VisionOS;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using Random = UnityEngine.Random;
 
 
 public class EnemyController_Boss_Slime : EnemyController
@@ -15,7 +17,7 @@ public class EnemyController_Boss_Slime : EnemyController
     private BossSlimeState state;
     public bool stateComplete = true;
     public bool isDead = false;
-
+    private bool isAttacking = true;
     private float counter, movingCounter;
     public GameObject slimeSummon;
 
@@ -150,8 +152,16 @@ public class EnemyController_Boss_Slime : EnemyController
     {
         // trigger inair animtor will make sprite transparent
         Debug.Log("In Air Start");
+
+        // Set invulerable, boss cannot be attack while performing jump
+        isInvulnerable = true;
+
+        // Boss Slime should not be damaging player while in air
+        isAttacking = false;
+
         // set attack counter back to zero
         jump.counterCount = 0;
+
         // turn on shadow
         shadow.gameObject.transform.localScale = Vector3.zero;
         shadow.gameObject.SetActive(true);
@@ -159,6 +169,7 @@ public class EnemyController_Boss_Slime : EnemyController
 
     private void inAirUpdate()
     {
+        // Shadow chases the player, determine by jump.counter as duration
         jump.counterCount += Time.deltaTime;
         if (jump.counterCount >= jump.counter)
         {
@@ -170,6 +181,7 @@ public class EnemyController_Boss_Slime : EnemyController
         }
  
        
+        // End on air, move to land
 
         if (Vector3.Distance(shadow.gameObject.transform.localScale, Vector3.one) < 0.01f)
         {
@@ -182,7 +194,19 @@ public class EnemyController_Boss_Slime : EnemyController
 
     private void landingUpdate()
     {
-        // Placeholder for landing update logic if needed.
+        // Set back invulerability
+
+        if (isInvulnerable == true)
+        {
+            isInvulnerable = false;
+        }
+
+        // Allow back to damage player
+
+        if (isAttacking == false)
+        {
+            isAttacking = true;
+        }
     }
 
     private void summonStart()
@@ -276,7 +300,21 @@ public class EnemyController_Boss_Slime : EnemyController
             }
         }
     }
+    public new void OnTriggerStay2D(Collider2D collision)
+    {
+        // Is boss in attacking state. This just prevent being able to attack when boss is in air
+        if (isAttacking == true)
+        {
+            // Hiting & Damaging player logic
+            if (collision.gameObject.tag == "Player")
+            {
+                PlayerHealthController.Instance.TakeDamage(damage, transform, 20f);
+            }
+        }
+
+    }
 }
+
 
 // Class for each moveset
 [System.Serializable]

@@ -53,20 +53,7 @@ public class EnemyController : MonoBehaviour
         theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-
-    }
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Hiting & Damaging player logic
-        if (collision.gameObject.tag == "Player")
-        {
-            PlayerHealthController.Instance.TakeDamage(damage, transform, 20f);
-        }
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         // Hiting & Damaging player logic
         if (collision.gameObject.tag == "Player")
@@ -77,17 +64,19 @@ public class EnemyController : MonoBehaviour
     
     public virtual void Death()
     {
-            // Kill enemy
-            Destroy(gameObject);
+        // Kill enemy
+        Destroy(gameObject);
+
+        // Count dead enemys
 
 
-            // Drop exp
-            ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);
+        // Drop exp
+        ExperienceLevelController.Instance.SpawnExp(transform.position, expToGive);
 
-            if (Random.value <= coinDropRate)
-            {
-                CoinController.instance.DropCoin(transform.position, coinValue);
-            }
+        if (Random.value <= coinDropRate)
+        {
+            CoinController.instance.DropCoin(transform.position, coinValue);
+        }
         
     }
 

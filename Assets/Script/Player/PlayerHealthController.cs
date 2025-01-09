@@ -43,7 +43,7 @@ public class PlayerHealthController : MonoBehaviour
 
         // Reduce health
         currnetHealth -= damageToTake;
-
+        Debug.Log("Player is damaged " + damageToTake + " by " + enemyTransform);
         PlayerController.instance.isInvulerable = true;
 
         // Calculate knockback direction

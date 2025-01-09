@@ -1,2 +1,2 @@
-# MahouShoujoSurvival
+# MSSurvival
  Game Project

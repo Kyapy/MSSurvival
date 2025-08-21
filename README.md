@@ -2,7 +2,7 @@
 *A 2D Top-Down Pixel-Art Survival Game Inspired by Vampire Survivors*
 
 ## Project Overview
-**Pixel Survival** is a **2D top-down survival game** developed in Unity.  
+**MSSurvival** is a **2D top-down survival game** developed in Unity.  
 The project draws inspiration from *Vampire Survivors* while incorporating an anime-inspired pixel-art aesthetic.  
 
 Players must survive against continuous waves of enemies using different weapons and attack types. Progression is achieved through a **leveling system** with item selection, culminating in battles against challenging **boss monsters**.  
